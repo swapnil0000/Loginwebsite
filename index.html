@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80b426469a.js" crossorigin="anonymous"></script>
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 id="tittle"> 
+                Sign Up
+            </h1>
+            <form>
+                <div class="input-group">
+                 <div class="input-field" id="namefield">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" placeholder="Email Id">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Password">
+                </div>
+                <p>Forgot Password <a href="#">Click Here</a></p>
+                </div>
+                <div class="btn">
+                    <button id="btn1">Sing Up</button>
+                    <button class="disable" id="btn2">Sing In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    let h1=document.getElementById("tittle");
+    let input=document.getElementById("namefield");
+    let singup=document.getElementById("btn1");
+    let singin=document.getElementById("btn2");
+
+    singin.onclick =function(){
+    input.style.maxHeight="0";
+    h1.innerHTML="Sign In";
+    singup.classList.add("disable")
+    singin.classList.remove("disable")
+}
+singup.onclick =function(){
+    input.style.maxHeight="60px";
+    h1.innerHTML="Sign Up";
+    singup.classList.remove("disable")
+    singin.classList.add("disable")
+}
+</script>
+}
+</html>
